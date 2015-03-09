@@ -16,8 +16,8 @@
         "phpspec/phpspec": "~2.0"
     },
     "autoload": {
-        "psr-0": {
-            "Common": "src/common"
+        "psr-4": {
+            "Common\\": "src/common/"
         }
     }
 }
