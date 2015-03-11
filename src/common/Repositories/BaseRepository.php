@@ -49,7 +49,11 @@ abstract class BaseRepository {
         return $this->model->where('active','=',true)->get();
     }
 
-    public function toggleStatus($id){
+    public function onlyWhere($column,$value){
+        return $this->model->where($column,'=',$value)->get();
+    }
+
+    public function toggle($id){
         $model = $this->find($id);
         if($model->active == false){
             $model->active = true;
